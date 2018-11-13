@@ -10,10 +10,15 @@ html {
   color: #a8a8a8;
   font-family: Lato, sans-serif;
   line-height: 1.5rem;
+   letter-spacing: 1px;
 }
 
 body {
-  background-color: #f4f4f4;
+  background: -webkit-linear-gradient(190deg, rgba(0, 143, 255, 0.07) 25%, rgba(0, 184, 219, 0.07) 33%, rgba(0, 255, 154, 0.06) 48%, rgba(74, 176, 194, 0.06) 61%, rgba(161, 83, 240, 0.07) 77%, rgba(161, 83, 240, 0.08) 88%);
+  background: -o-linear-gradient(190deg, rgba(0, 143, 255, 0.07) 25%, rgba(0, 184, 219, 0.07) 33%, rgba(0, 255, 154, 0.06) 48%, rgba(74, 176, 194, 0.06) 61%, rgba(161, 83, 240, 0.07) 77%, rgba(161, 83, 240, 0.08) 88%);
+  background: -ms-linear-gradient(190deg, rgba(0, 143, 255, 0.07) 25%, rgba(0, 184, 219, 0.07) 33%, rgba(0, 255, 154, 0.06) 48%, rgba(74, 176, 194, 0.06) 61%, rgba(161, 83, 240, 0.07) 77%, rgba(161, 83, 240, 0.08) 88%);
+  background: -moz-linear-gradient(190deg, rgba(0, 143, 255, 0.07) 25%, rgba(0, 184, 219, 0.07) 33%, rgba(0, 255, 154, 0.06) 48%, rgba(74, 176, 194, 0.06) 61%, rgba(161, 83, 240, 0.07) 77%, rgba(161, 83, 240, 0.08) 88%);
+  background: linear-gradient(260deg, rgba(0, 143, 255, 0.07) 25%, rgba(0, 184, 219, 0.07) 33%, rgba(0, 255, 154, 0.06) 48%, rgba(74, 176, 194, 0.06) 61%, rgba(161, 83, 240, 0.07) 77%, rgba(161, 83, 240, 0.08) 88%);
 }
 
   /*============
@@ -68,16 +73,32 @@ a {
     margin-left: 0;
     margin-bottom: 10px;
     padding: 6px 0;
-    background: #fff;
+    background: #e6f2ff;
+    border: 2px solid  #99caff;
+    border-radius: 5px;
     text-align: center;
-    display: block
+    display: block;
+    transition: all .3s;
+  }
 
+  .main-nav li:hover {
+    transform: translateY(-2px);
+  }
+
+  .main-nav li a {
+    color: black;
+    padding: 10px;
+    transition: all .3s;
   }
 
   .my-name {
+    font-family: 'Sedgwick Ave', cursive;
+    letter-spacing: 2px;
+    font-weight: 100;
     text-align: center;
     color: #353535;
     font-size: 1.8rem;
+    font-weight: lighter;
     display: block;
     margin-bottom: 1.3rem;
     margin-top: 1.3rem;
@@ -89,7 +110,6 @@ a {
     font-size: 1.5rem;
     padding-right: 15px;
     text-align: center;
-
   }
 
   #pic-profile {
@@ -106,11 +126,11 @@ a {
 
   main {
     margin: 55px 0px -30px 0px;
-    background-color: #fff;
+    background: linear-gradient(transparent, rgba(102, 194, 255, 0.4) 10%, transparent 99%);
     padding-bottom: 5rem;
   }
 
-  main h2 {
+  h2 {
     text-align: center;
     margin: 5rem 0;
     font-size: 1.6rem;
@@ -137,11 +157,31 @@ a {
     width: 95%;
   }
 
+      /*============
+      Skills
+  ============*/
+
+
+  #section-skills {
+    background: #ff9999;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    color: white;
+  }
+
+ /* #section-skills h2 {font-size: 1.6rem;}*/
+
+  #section-skills p {
+    width: 80%;
+    margin: 3rem auto;
+    text-align: center;
+  }
+
     /*============
       Contact
   ============*/
 
-  .section-contact {
+  #section-contact {
     margin-top: 20px;
   }
 
@@ -155,7 +195,6 @@ a {
   }
 
   .contact h2 {
-    font-size: 1.6rem;
     margin-bottom: 30px;
   }
 
@@ -173,17 +212,22 @@ a {
     display: inline;
     font-size: 1rem;
     font-weight: bold;
+    color: black;
   }
 
   .footer-nav {
     display: none;
   }
 
+  .footer-nav li a { color: black; }
+
   .back-to-top {
     font-size: 1rem;
     display: inline;
     float: right;
   }
+
+  .back-to-top a {color: black;}
 
   /*============
       768px Media
@@ -209,10 +253,19 @@ a {
     padding: 6px 6px;
     text-align: center;
     display: inline-block;
+    border: none;
+    background: transparent;
   }
 
   .main-nav li:not(:last-of-type) {
     margin-right: 1.5rem;
+  }
+
+  .main-nav li a:hover { 
+    background-color: #ff9999;
+    color: #fff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
   }
 
   .my-name {
@@ -257,6 +310,7 @@ a {
     font-size: 1.5rem;
   }
 
+  h2 {font-size: 1.8rem;}
 
   .back-to-top {
     display: none;
@@ -297,13 +351,13 @@ a {
     color: #353535;
     font-size: 2.5rem;
     display: inline-block;
-    width: 50%;
+    width: 41%;
     text-align: left;
-    margin-top: 0;
+    margin-top: .6rem;
   }
 
   .main-nav {
-    width: 50%;
+    width: 58%;
     float: right;
     list-style: none;
     margin-top: 0;
@@ -340,10 +394,11 @@ a {
     color: #353535;;
   }
 
+  h2 {font-size: 2rem;}
+
   main {
     width: 98%;
     margin: 0 auto;
-    background-color: #fff;
     padding-bottom: 2rem;
   }
 
@@ -375,6 +430,7 @@ a {
     width: 100%;
     margin-bottom: 40px;
   }
+
 
   .footer-my-name,
   .footer-nav {
